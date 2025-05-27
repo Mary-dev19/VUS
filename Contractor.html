@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contractor Registration</title>
+<style>
+    /* Embedded CSS styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url('img.10.PNG');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .container {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #ccc; 
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+    }  
+
+    label {
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: grey; /* Changed from green to grey */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+        width: 100%;
+        padding: 10px;
+        background-color: grey;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    } 
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Contractor Registration</h2>
+    <form action="Contractor.php" method="post">
+        <label for="name">Firstname:</label>
+        <input type="text" name="Name" maxlength="15" required>
+
+        <label for="surname">Surname:</label>
+        <input type="text" name="Surname" maxlength="15" required>
+
+        <label for="username">Username:</label>
+        <input type="text" name="Username">
+
+        <label for="password">Password:</label>
+        <input type="password" name="Password" required>
+
+        <label for="confirm">Confirm password:</label>
+        <input type="password" name="Confirm" required><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" name="Email" required>
+
+        <label for="gender">Gender:</label><br>
+        <input type="radio" name="Gender" value="Female" required> Female<br>
+        <input type="radio" name="Gender" value="Male" required> Male<br>
+
+        <label for="contacts">Contact:</label>
+        <input type="tel" name="Contacts" required><br>
+
+        <label for="dob">Date of birth:</label>
+        <input type="date" name="DOB" required>
+
+        <label for="address">Address:</label>
+        <select name="Address">
+            <option value="select">Select</option>
+            <option value="Abia">Abia</option>
+            <option value="Hafoso">Hafoso</option>
+            <option value="Lesia">Lesia</option>
+            <option value="Hathetsne">Hathetsane</option>
+            <option value="Katlehong">Katlehong</option>
+            <option value="Qoaling">Qoaling</option>
+            <option value="Masowe">Masowe</option>
+            <option value="Sea point">Sea point</option>
+            <option value="Naledi">Naledi</option>
+            <option value="Khubetsoana">Khubetsoana</option>
+        </select><br>
+
+        <label for="service">Service:</label>
+        <select name="service">
+            <option value="Bridge construction">Bridge construction</option>
+            <option value="Roads construction">Roads construction</option>
+            <option value="Water Construction">Water Construction</option>
+            <option value="Potholes patching">Potholes patching</option>
+            <option value="Plumber">Plumber</option>
+            <option value="Sanitation Workers">Sanitation Workers</option>
+        </select><br>
+
+        <label for="price">Price per/hour:</label><br>
+        <input type="number" name="price">
+
+        <input type="submit" name="register" value="Register">
+        <a href="Con_log.html">Login</a>
+    </form>
+</div>
+
+</form>
+
+</body>
+</html>

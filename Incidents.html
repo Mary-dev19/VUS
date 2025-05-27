@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Incidents Form</title>
+<style>
+    /* Embedded CSS styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url('img.10.PNG');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .container {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #ccc; 
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+    }  
+
+    label {
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: grey;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Incidents Form</h2>
+    <form action="Incidents.php" method="post" id="userform" enctype="multipart/form-data"> 
+        <label for="address">Address:</label>
+        <select name="Address">
+            <option value="select">Select</option>
+            <option value="Abia">Abia</option>
+            <option value="Hafoso">Hafoso</option>
+            <option value="Lesia">Lesia</option>
+            <option value="Hathetsne">Hathetsane</option>
+            <option value="Katlehong">Katlehong</option>
+            <option value="Qoaling">Qoaling</option>
+            <option value="Masowe">Masowe</option>
+            <option value="Sea point">Sea point</option>
+            <option value="Naledi">Naledi</option>
+            <option value="Khubetsoana">Khubetsoana</option>
+        </select><br>
+        
+        <label for="name">Incident Name</label>
+        <select name="name">
+            <option value="select">Select</option>
+            <option value="Road reconstruction">Road reconstruction</option>
+            <option value="Floods">Floods</option>
+            <option value="Water pipe leakage">Water pipe leakage</option>
+            <option value="Garbage system">Garbage system</option>
+        </select>
+        
+        <label for="Description">Incident Description</label><br>
+        <textarea id="Description" name="Description" rows="4" cols="50" required></textarea>
+        <br>
+
+        <label for="incidentImage">Incident image:</label><br>
+        <input type="file" id="incidentImage" name="incidentImage" accept="image/*" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</body>
+</html>

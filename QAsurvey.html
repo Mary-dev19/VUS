@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Evaluation Form</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        form {
+            width: 20%;
+            background-color: #ccc; /* Grey background color */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold; /* Set font weight to bold */
+        }
+        textarea, select, input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .rating {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .rating input {
+            display: none;
+        }
+        .rating label {
+            font-size: 2em;
+            padding: 0 0.1em;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .rating label::before {
+            content: "\2605";
+            margin: 0 0.1em;
+        }
+        .rating input:checked ~ label {
+            color: orange;
+        }
+        input[type="submit"] {
+            background-color: #007bff; /* Blue submit button */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <form action="QAsurvey.php" method="POST">
+    <h1>Task Evaluation Form</h1>
+    <label for="alloid">AlloID:</label>
+    <input type="text" id="alloid" name="alloid" required>
+  
+    <label for="task_description">Task Description:</label>
+    <textarea id="task_description" name="task_description" rows="4" required></textarea>
+        
+    <label for="decision">Decline/Accept:</label>
+    <select id="decision" name="decision" required>
+            <option value="Accept">Accept</option>
+            <option value="Decline">Decline</option>
+    </select>
+        
+    <label for="comments">Comments:</label>
+    <textarea id="comments" name="comments" rows="4"></textarea>
+        
+    <label for="rating">Rating of Contractor Services:</label>
+    <div class="rating">
+            <input type="radio" id="star5" name="rating" value="5">
+            <label for="star5"></label>
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4"></label>
+            <input type="radio" id="star3" name="rating" value="3">
+            <label for="star3"></label>
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2"></label>
+            <input type="radio" id="star1" name="rating" value="1">
+            <label for="star1"></label>
+    </div>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

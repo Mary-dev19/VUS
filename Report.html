@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contractor Report</title>
+<style>
+    /* Embedded CSS styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url('img.10.PNG');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .container {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #ccc; 
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+    }  
+
+    label {
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: grey; /* Changed from green to grey */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Contractor Report Form</h2>
+    <form method="POST" action="Report.php">
+<label for="alloid">Allo ID:</label>
+    <input type="text" id="alloid" name="alloid" required><br><br>
+
+        <label for="incident_id">Incident ID:</label>
+        <input type="text" id="incident_id" name="incident_id" required><br><br>
+
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="fixing_date">Fixing Date:</label>
+        <input type="date" id="fixing_date" name="fixing_date" required><br><br>
+
+        <label for="user_id">User ID:</label>
+        <input type="text" id="user_id" name="user_id" required><br><br>
+
+        <label for="comment">Comment:</label><br>
+        <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br><br>
+		
+		<label for="hours">Hours Spent:</label><br>
+        <input type="number" id="hours" name="hours" required><br>
+
+        <input type="submit" value="Submit Report">
+		<a href="contractorDash.html">Go Back<a/>
+    </form>
+</div>
+</body>
+</html>

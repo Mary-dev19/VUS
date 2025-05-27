@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>City Administrator Dashboard</title>
+    <style>
+        /* Embedded CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #ccc; /* Changed to grey */
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        header,
+        footer {
+            background-color: grey; /* Changed to grey */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            border-radius: 10px 10px 0 0;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #4CAF50;
+        }
+
+        .content {
+            padding: 20px;
+            display: flex; /* Added */
+            flex-wrap: wrap; /* Added */
+            justify-content: space-between; /* Added */
+        }
+
+        .service {
+            flex-basis: 48%; /* Added */
+            text-align: center;
+        }
+
+        .service img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .book-now {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .book-now button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .book-now button:hover {
+            background-color: #45a049;
+        }
+
+        .frame {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .frame a {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: #000;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 style="color: #fff;">City Administrator</h1>
+</header>
+
+<div class="container">
+        <ul>
+            <li><button onclick="window.location.href='contractorsApproval.php'">Contractor Approval</button></li> 
+			<li><button onclick="window.location.href='incidentsApproval.php'">Incidents Approval</button></li>
+            <li><button onclick="window.location.href='Allocations.php'">Allocate Incidents</button></li>
+			<li><button onclick="window.location.href='viewConr.php'">Contractor Report</button></li>
+			<li><button onclick="window.location.href='View_QAReport.php'">QA Report</button></li>
+			<li><button onclick="window.location.href='pay.php'">Pay Constractors</button></li>
+			<li><button onclick="window.location.href='Request.php'">Requests</button></li>
+            <li style="float:right"><button onclick="window.location.href='logOut.php'">Log Out</button></li>
+            </ul>
+ <div id="home" class="content">
+<img src="img.8.PNG" style="width:100%">
+</div>
+    </div>
+	
+<footer style="background-color: grey;">
+        <p style="color: #fff;">© 2024 VANGUARD utility system (VUS). All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
